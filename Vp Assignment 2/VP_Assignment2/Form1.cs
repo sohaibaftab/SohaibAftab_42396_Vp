@@ -16,7 +16,7 @@ namespace VP_Assignment2
         int j = 0, k = 0, d = 0, tmp = 0;
         String[] arr = new String[500];
         String[] uniq = new String[500];
-        string filename = "C:\\Users\\sohaibaftab\\Desktop\\profile.txt";
+        string filename = "profile.txt";
         public Form1()
         {
             InitializeComponent();
@@ -35,6 +35,11 @@ namespace VP_Assignment2
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.BackgroundImageLayout = ImageLayout.Stretch;
         }
     }
 }

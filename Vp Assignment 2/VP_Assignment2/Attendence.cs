@@ -16,7 +16,7 @@ namespace VP_Assignment2
         int j = 0, k = 0, d = 0, tmp = 0;
         String[] arr = new String[500];
         String[] uniq = new String[500];
-        string filename = "C:\\Users\\sohaibaftab\\Desktop\\profile.txt";
+        string filename = "profile.txt";
         public Attendence()
         {
             InitializeComponent();
@@ -36,7 +36,7 @@ namespace VP_Assignment2
         {
             String[] q = new String[500];
             int t = 0;
-            StreamReader re = File.OpenText("C:\\Users\\sohaibaftab\\Desktop\\profile.txt");
+            StreamReader re = File.OpenText("profile.txt");
 
             do
             {
@@ -51,9 +51,10 @@ namespace VP_Assignment2
             while (!re.EndOfStream);
 
                 for (int i = 0; i < k; i++)
-                {
+                
                     if (arr[i] == Atten.Text)
                     {
+                        
                         q[d] = Atten.Text;
                         d++;
                         
@@ -65,12 +66,16 @@ namespace VP_Assignment2
                         {
                             q[d] = "P";
                         }
-
+                        MessageBox.Show("Name found and attendence is marked");
+                        Atten.Text = "";
+                        
 
                     }
-                }
+                
+            
+
                 re.Close();
-                StreamWriter write = File.AppendText("C:\\Users\\sohaibaftab\\Desktop\\attendence.txt");
+                StreamWriter write = File.AppendText("attendence.txt");
                 for (int i = 0; i < k; i++)
                 {
                     write.WriteLine(q[i]);
@@ -83,6 +88,13 @@ namespace VP_Assignment2
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            main obj1 = new main();
+            this.Hide();
+            obj1.Show();
         }
     }
 }

@@ -3,6 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VP_Assignment2", "VP_Assignment2\VP_Assignment2.csproj", "{00D8E2AC-7E7F-4E3A-876F-65869B48C1E2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A93FD361-748D-45FA-9E38-5BC80CAE9922}"
+	ProjectSection(SolutionItems) = preProject
+		profile.txt = profile.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

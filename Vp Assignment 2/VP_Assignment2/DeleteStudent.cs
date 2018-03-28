@@ -16,7 +16,7 @@ namespace VP_Assignment2
         int j = 0, k = 0, d = 0, tmp = 0;
         String[] arr = new String[500];
         String[] uniq = new String[500];
-        string filename = "C:\\Users\\sohaibaftab\\Desktop\\profile.txt";
+        string filename = "profile.txt";
         public DeleteStudent()
         {
             InitializeComponent();
@@ -44,7 +44,7 @@ namespace VP_Assignment2
                 {
                     MessageBox.Show("Record found and Deleted");
                     i = i + 5;
-
+                    delete.Text = "";
                 }
                 else
                     dee[d] = arr[i];
@@ -62,6 +62,13 @@ namespace VP_Assignment2
             }
             write.Close();
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            main obj = new main();
+            this.Hide();
+            obj.Show();
         }
     }
 }

@@ -16,7 +16,7 @@ namespace VP_Assignment2
         int j = 0, k = 0, d = 0, tmp = 0;
         String[] arr = new String[500];
         String[] uniq = new String[500];
-        string filename = "C:\\Users\\sohaibaftab\\Desktop\\profile.txt";
+        string filename = "profile.txt";
         public Top3Cgpa()
         {
             InitializeComponent();
@@ -47,6 +47,18 @@ namespace VP_Assignment2
             top3.Text=gpaList[2];
 
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            main obj1 = new main();
+            this.Hide();
+            obj1.Show();
         }
     }
 }

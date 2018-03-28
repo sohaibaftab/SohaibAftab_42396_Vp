@@ -11,8 +11,13 @@ using System.IO;
 
 namespace VP_Assignment2
 {
+
     public partial class viewAttendence : Form
     {
+        int j = 0, k = 0, d = 0, tmp = 0;
+        String[] arr = new String[500];
+        String[] uniq = new String[500];
+        string filename = "attendence.txt";
         public viewAttendence()
         {
             InitializeComponent();
@@ -20,18 +25,31 @@ namespace VP_Assignment2
 
         private void button1_Click(object sender, EventArgs e)
         {
+            StreamReader re = File.OpenText(filename);
 
-            StreamReader re = File.OpenText("C:\\Users\\sohaibaftab\\Desktop\\attendence.txt");
             do
             {
-
-                textBox1.Text = re.ReadLine();
-                
-
+                arr[k] = re.ReadLine();
+                k++;
             }
             while (!re.EndOfStream);
+            for (int i = 0; i < k; i++)
+            {
 
+                if (arr[i] == textBox1.Text)
+                {
+                    MessageBox.Show("Record Found\n" + arr[++i]);
 
+                    
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            main obj = new main();
+            this.Hide();
+            obj.Show();
         }
     }
 }

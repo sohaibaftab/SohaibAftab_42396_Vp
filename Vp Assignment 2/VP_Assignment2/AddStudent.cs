@@ -17,7 +17,7 @@ namespace VP_Assignment2
         int j = 0, k = 0, d = 0, tmp = 0;
         String[] arr = new String[500];
         String[] uniq = new String[500];
-        string filename = "C:\\Users\\sohaibaftab\\Desktop\\profile.txt";
+        string filename = "profile.txt";
 
         public AddStudent()
         {
@@ -58,6 +58,62 @@ namespace VP_Assignment2
             this.Close();
             main obj = new main();
             obj.Show();
+        }
+
+        private void button3_Click(object sender, System.EventArgs e)
+        {
+            StreamReader re = File.OpenText(filename);
+
+            do
+            {
+                arr[k]=re.ReadLine();
+                re.ReadLine();
+                re.ReadLine();
+                re.ReadLine();
+                re.ReadLine();
+                re.ReadLine();
+                k++;
+            }
+            while (!re.EndOfStream);
+            for (int i = 0; i < k; i++)
+            {
+
+                if (arr[i] == id.Text)
+                {
+
+                    MessageBox.Show("Already exist");
+                    this.Close();
+                    main obj = new main();
+                    obj.Show();
+                }
+                else
+                    
+                semster.ReadOnly = false;
+                cgpa.ReadOnly = false;
+                univ.ReadOnly = false;
+                name.ReadOnly = false;
+                dept.ReadOnly = false;
+                
+
+            }
+            re.Close();
+
+        }
+
+        private void button2_Click(object sender, System.EventArgs e)
+        {
+            
+            id.Text="";
+            name.Text = "";
+            semster.Text = "";
+            cgpa.Text = "";
+            dept.Text = "";
+            univ.Text = "";
+        }
+
+        private void AddStudent_Load(object sender, System.EventArgs e)
+        {
+
         }
     }
 }

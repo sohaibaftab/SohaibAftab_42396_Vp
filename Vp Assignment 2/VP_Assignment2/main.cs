@@ -35,8 +35,8 @@ namespace VP_Assignment2
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            SearchStudent obj3 = new SearchStudent();
-            obj3.Show();
+            SearchType obj9 = new SearchType();
+            obj9.Show();
 
         }
 
@@ -45,8 +45,7 @@ namespace VP_Assignment2
             this.Hide();
             DeleteStudent obj4 = new DeleteStudent();
             obj4.Show();
-            main obj = new main();
-            obj.Show();
+           
 
         }
 
