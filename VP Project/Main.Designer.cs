@@ -173,7 +173,6 @@
             this.radioButton10 = new System.Windows.Forms.RadioButton();
             this.Abbreviate = new System.Windows.Forms.RadioButton();
             this.richTextBox16 = new System.Windows.Forms.RichTextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.tabPage19 = new System.Windows.Forms.TabPage();
             this.label17 = new System.Windows.Forms.Label();
             this.button33 = new System.Windows.Forms.Button();
@@ -183,6 +182,7 @@
             this.radioButton21 = new System.Windows.Forms.RadioButton();
             this.radioButton26 = new System.Windows.Forms.RadioButton();
             this.richTextBox17 = new System.Windows.Forms.RichTextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tabPage4.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -1967,13 +1967,6 @@
             this.richTextBox16.TabIndex = 41;
             this.richTextBox16.Text = " find correct spelling :";
             // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1323, 51);
-            this.panel1.TabIndex = 1;
-            // 
             // tabPage19
             // 
             this.tabPage19.Controls.Add(this.label17);
@@ -2080,6 +2073,13 @@
             this.richTextBox17.Size = new System.Drawing.Size(466, 177);
             this.richTextBox17.TabIndex = 49;
             this.richTextBox17.Text = " find correct spelling :";
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1323, 51);
+            this.panel1.TabIndex = 1;
             // 
             // Main
             // 

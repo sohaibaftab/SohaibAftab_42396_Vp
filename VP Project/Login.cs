@@ -23,18 +23,20 @@ namespace Vp_semester_Project
             //this.Hide();
             //Main mainPage = new Main();
             //mainPage.Show();
-            this.Hide();
-            Admin power=new Admin();
-            power.Show();
+            
 
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\sohaibaftab\Documents\Data.mdf;Integrated Security=True;Connect Timeout=30");
-            SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) From Login where Username='" + textBox1.Text + "'and Password='" + textBox2.Text + "'", con);
+            SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) From register where userName='" + textBox1.Text + "'and password='" + textBox2.Text + "'", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             if (dt.Rows[0][0].ToString() == "1")
             {
-
+                this.Hide();
+                Test main = new Test();
+                main.Show();
             }
+            else
+                MessageBox.Show("invalid");
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -47,6 +49,11 @@ namespace Vp_semester_Project
         private void Login_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            
         }
     }
 }

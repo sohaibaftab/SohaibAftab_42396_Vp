@@ -1,7 +1,6 @@
 C:\Users\sohaibaftab\Documents\Visual Studio 2012\Projects\Vp_semester_Project\Vp_semester_Project\bin\Debug\Vp_semester_Project.exe.config
 C:\Users\sohaibaftab\Documents\Visual Studio 2012\Projects\Vp_semester_Project\Vp_semester_Project\bin\Debug\Vp_semester_Project.exe
 C:\Users\sohaibaftab\Documents\Visual Studio 2012\Projects\Vp_semester_Project\Vp_semester_Project\bin\Debug\Vp_semester_Project.pdb
-C:\Users\sohaibaftab\Documents\Visual Studio 2012\Projects\Vp_semester_Project\Vp_semester_Project\obj\Debug\Vp_semester_Project.csprojResolveAssemblyReference.cache
 C:\Users\sohaibaftab\Documents\Visual Studio 2012\Projects\Vp_semester_Project\Vp_semester_Project\obj\Debug\Vp_semester_Project.Login.resources
 C:\Users\sohaibaftab\Documents\Visual Studio 2012\Projects\Vp_semester_Project\Vp_semester_Project\obj\Debug\Vp_semester_Project.Main.resources
 C:\Users\sohaibaftab\Documents\Visual Studio 2012\Projects\Vp_semester_Project\Vp_semester_Project\obj\Debug\Vp_semester_Project.Properties.Resources.resources
@@ -10,3 +9,4 @@ C:\Users\sohaibaftab\Documents\Visual Studio 2012\Projects\Vp_semester_Project\V
 C:\Users\sohaibaftab\Documents\Visual Studio 2012\Projects\Vp_semester_Project\Vp_semester_Project\obj\Debug\Vp_semester_Project.exe
 C:\Users\sohaibaftab\Documents\Visual Studio 2012\Projects\Vp_semester_Project\Vp_semester_Project\obj\Debug\Vp_semester_Project.pdb
 C:\Users\sohaibaftab\Documents\Visual Studio 2012\Projects\Vp_semester_Project\Vp_semester_Project\obj\Debug\Vp_semester_Project.Admin.resources
+C:\Users\sohaibaftab\Documents\Visual Studio 2012\Projects\Vp_semester_Project\Vp_semester_Project\obj\Debug\Vp_semester_Project.Test.resources

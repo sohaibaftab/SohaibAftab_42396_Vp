@@ -63,6 +63,46 @@ namespace Vp_semester_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _002_unlock {
+            get {
+                object obj = ResourceManager.GetObject("002-unlock", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _003_id_card_1 {
+            get {
+                object obj = ResourceManager.GetObject("003-id-card-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _005_login {
+            get {
+                object obj = ResourceManager.GetObject("005-login", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _012_id_card {
+            get {
+                object obj = ResourceManager.GetObject("012-id-card", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _365610d5c4b9705 {
             get {
                 object obj = ResourceManager.GetObject("365610d5c4b9705", resourceCulture);
@@ -76,6 +116,26 @@ namespace Vp_semester_Project.Properties {
         internal static System.Drawing.Bitmap butler_library_columbia_university_new_york_wallpaper_1440x900 {
             get {
                 object obj = ResourceManager.GetObject("butler_library_columbia_university_new_york-wallpaper-1440x900", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap orig_7322 {
+            get {
+                object obj = ResourceManager.GetObject("orig_7322", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap photo_jpg {
+            get {
+                object obj = ResourceManager.GetObject("photo.jpg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
