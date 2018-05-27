@@ -21,24 +21,27 @@ namespace Vp_semester_Project
         public int RollNumber;
         private void button1_Click(object sender, EventArgs e)
         {
-            //this.Hide();
-            //Main mainPage = new Main();
-            //mainPage.Show();
-            
-
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\sohaibaftab\Documents\Data.mdf;Integrated Security=True;Connect Timeout=30");
-            SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) From AddUser where RollNo='" + textBox1.Text + "'and password='" + textBox2.Text + "'", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            if (dt.Rows[0][0].ToString() == "1")
+            try
             {
-                this.Hide();
-                Test main = new Test();
-                main.Show();
-                
+                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\sohaibaftab\Documents\Data.mdf;Integrated Security=True;Connect Timeout=30");
+                SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) From AddUser where RollNo='" + rollno.Text + "'and password='" + textBox2.Text + "'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                if (dt.Rows[0][0].ToString() == "1")
+                {
+                    this.Hide();
+                    Test main = new Test(rollno.Text);
+                    main.Show();
+
+                }
+                else
+                    MessageBox.Show("invalid");
             }
-            else
-                MessageBox.Show("invalid");
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -56,6 +59,13 @@ namespace Vp_semester_Project
         private void button2_Click_1(object sender, EventArgs e)
         {
             
+        }
+
+        private void button2_Click_2(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainLogin back = new MainLogin();
+            back.Show();
         }
     }
 }

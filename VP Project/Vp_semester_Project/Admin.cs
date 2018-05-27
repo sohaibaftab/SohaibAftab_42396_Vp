@@ -26,6 +26,12 @@ namespace Vp_semester_Project
             SqlCommand comand = new SqlCommand(str,con);
             comand.ExecuteNonQuery();
             con.Close();
+            Question.Text = "";
+            A.Text = "";
+            B.Text = "";
+            C.Text = "";
+            D.Text = "";
+            Answer.Text = "";
         }
     }
 }

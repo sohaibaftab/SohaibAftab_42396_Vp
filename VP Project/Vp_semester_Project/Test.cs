@@ -19,91 +19,97 @@ namespace Vp_semester_Project
         private string[] ques = new string[10000];
         private string[] ans = new string[10000];
         private string[] correctAns = new string[10000];
-        int i=0,j=0,k=0,l=0,result=0,t=0,p=0,anss=0,duration = 20,QNumber=1;
-        public Test()
+        string RNumber;
+        int quesInc=0,j=0,ansCheck=0,orignalAns=0,result=0,countQues=0,addQues=0,anss=0,duration = 20,QNumber=1;
+        public Test( string  roll)
         {
-            InitializeComponent();
-            readData();
-            questions.Text = ques[j++];
-            optionA.Text = ques[j++];
-            optionB.Text = ques[j++];
-            optionC.Text = ques[j++];
-            radioButton4.Text = ques[j++];
-            Unchecked();
-            label2.Text = p.ToString();
-            label3.Text = QNumber.ToString();
-           
-            qNo.Text = QNumber.ToString();
-            
-
-
-
-        }
-        public void readData()
-        {
-            string con = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\sohaibaftab\Documents\Data.mdf;Integrated Security=True;Connect Timeout=30";
-            using (SqlConnection myConnection = new SqlConnection(con))
+            try
             {
-                string oString = "Select * from Questions ";
-                SqlCommand oCmd = new SqlCommand(oString, myConnection);
-                myConnection.Open();
-                using (SqlDataReader oReader = oCmd.ExecuteReader())
-                {
-                    while(oReader.Read())
-                    {
-                        
-                            ques[i++] = oReader["questions"].ToString();
-                            ques[i++] = oReader["optionOne"].ToString();
-                            ques[i++] = oReader["optionTwo"].ToString();
-                            ques[i++] = oReader["optionThree"].ToString();
-                            ques[i++] = oReader["optionFour"].ToString();
-                            correctAns[l++] = oReader["Answer"].ToString();
-                            duration += 20;
-                            p++;
-                    }
-
-                    myConnection.Close();
-                }
-            }
-
-        }
-        private void button1_Click(object sender, EventArgs e)
-        {
-                 saveAnswer();    
-                 Unchecked();
+                InitializeComponent();
+                readData();
                 questions.Text = ques[j++];
                 optionA.Text = ques[j++];
                 optionB.Text = ques[j++];
                 optionC.Text = ques[j++];
                 radioButton4.Text = ques[j++];
-                t++;
-                QNumber++;
-                label3.Text = QNumber.ToString();
+                Unchecked();
+                label2.Text = addQues.ToString();
+                RemaingingQuestions.Text = QNumber.ToString();
                 qNo.Text = QNumber.ToString();
-               
-            if(t==p)
-            {
-                 
-                
-                tabControl1.SelectedTab = tabPage3;
-                label4.Text=result.ToString();
-                
+                RNumber = roll;
+                table.Hide();
+                QNumber++;
             }
-         
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }    
+
+        public void readData()
+        {
+            try
+            {
+
+                string con = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\sohaibaftab\Documents\Data.mdf;Integrated Security=True;Connect Timeout=30";
+                using (SqlConnection myConnection = new SqlConnection(con))
+                {
+                    string oString = "Select * from Questions ";
+                    SqlCommand oCmd = new SqlCommand(oString, myConnection);
+                    myConnection.Open();
+                    using (SqlDataReader oReader = oCmd.ExecuteReader())
+                    {
+                        while (oReader.Read())
+                        {
+
+                            ques[quesInc++] = oReader["questions"].ToString();
+                            ques[quesInc++] = oReader["optionOne"].ToString();
+                            ques[quesInc++] = oReader["optionTwo"].ToString();
+                            ques[quesInc++] = oReader["optionThree"].ToString();
+                            ques[quesInc++] = oReader["optionFour"].ToString();
+                            correctAns[orignalAns++] = oReader["Answer"].ToString();
+                            duration += 20;
+                            addQues++;
+                        }
+
+                        myConnection.Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
-
-
-        private void button4_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            j = j-10;
-            
-            questions.Text = ques[j++];
-            optionA.Text = ques[j++];
-            optionB.Text = ques[j++];
-            optionC.Text = ques[j++];
-            radioButton4.Text = ques[j++];
-            
+            try
+            {
+                saveAnswer();
+                Unchecked();
+                questions.Text = ques[j++];
+                optionA.Text = ques[j++];
+                optionB.Text = ques[j++];
+                optionC.Text = ques[j++];
+                radioButton4.Text = ques[j++];
+                countQues++;
+                
+                RemaingingQuestions.Text = QNumber.ToString();
+                qNo.Text = QNumber.ToString();
+
+                if (countQues == addQues)
+                {
+                    tabControl1.SelectedTab = tabPage3;  
+
+                }
+                QNumber++;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }     
+
         }
 
         public void Unchecked()
@@ -117,31 +123,29 @@ namespace Vp_semester_Project
         {
             if (optionA.Checked == true)
             {
-                ans[k] = optionA.Text;
+                ans[ansCheck] = optionA.Text;
             }
             if (optionB.Checked == true)
             {
-                ans[k] = optionB.Text;
+                ans[ansCheck] = optionB.Text;
             }
             if (optionC.Checked == true)
             {
-                ans[k] = optionC.Text;
+                ans[ansCheck] = optionC.Text;
             }
             if (radioButton4.Checked == true)
             {
-                ans[k] = radioButton4.Text;
+                ans[ansCheck] = radioButton4.Text;
             }
             if (optionA.Checked && optionB.Checked && optionC.Checked && radioButton4.Checked == false)
             {
-                ans[k] = "null";
+                ans[ansCheck] = "null";
             }
-            k++;
+            ansCheck++;
             if (ans[anss] == correctAns[anss])
             {
                 result = result + 10;
                 
-
-
             }
             
             anss++;
@@ -167,14 +171,58 @@ namespace Vp_semester_Project
             tabControl1.SelectedTab = tabPage2;
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        public float CalulateAggregate(float Fsc, float matric)
         {
+           
+            float fscpercentage = (Fsc / 1100) * 15;
+            float MatricPercentage = ((matric) / 1050) * 10;
+            float score = result;
+            
+            float resultPercenatge = (score / QNumber) * 75;
+            float Aggregate = fscpercentage + MatricPercentage+score ;
+            return  Aggregate;
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                table.Show();
+                string con = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\sohaibaftab\Documents\Data.mdf;Integrated Security=True;Connect Timeout=30";
+                using (SqlConnection myConnection = new SqlConnection(con))
+                {
+                    string oString = "Select * from AddUser where RollNo='" + int.Parse(RNumber) + "'";
+                    SqlCommand oCmd = new SqlCommand(oString, myConnection);
+                    myConnection.Open();
+                    using (SqlDataReader oReader = oCmd.ExecuteReader())
+                    {
+                        while (oReader.Read())
+                        {
 
+                            rollNumber.Text = oReader["RollNo"].ToString();
+                            name.Text = oReader["firstName"].ToString();
+                            fscMarks.Text = oReader["fscMarks"].ToString();
+                            matricMarks.Text = oReader["matricMarks"].ToString();
+                        }
+
+                        myConnection.Close();
+                    }
+                    testScore.Text = result.ToString();
+                    float f = float.Parse(fscMarks.Text);
+                    float t = float.Parse(fscMarks.Text);
+                    Aggregate.Text = (CalulateAggregate(f, t).ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
-        private void label13_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            MainLogin mainScreen = new MainLogin();
+            mainScreen.Show();
         }
 
        

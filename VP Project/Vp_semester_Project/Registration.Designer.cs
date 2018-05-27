@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.SingUp = new System.Windows.Forms.Button();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.address = new System.Windows.Forms.TextBox();
+            this.matric = new System.Windows.Forms.TextBox();
+            this.fsc = new System.Windows.Forms.TextBox();
+            this.email = new System.Windows.Forms.TextBox();
+            this.contactNo = new System.Windows.Forms.TextBox();
+            this.secondName = new System.Windows.Forms.TextBox();
+            this.firstName = new System.Windows.Forms.TextBox();
+            this.username = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -45,84 +45,86 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.password = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // SingUp
             // 
-            this.SingUp.Location = new System.Drawing.Point(573, 459);
+            this.SingUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SingUp.Location = new System.Drawing.Point(417, 475);
             this.SingUp.Name = "SingUp";
-            this.SingUp.Size = new System.Drawing.Size(75, 23);
+            this.SingUp.Size = new System.Drawing.Size(171, 69);
             this.SingUp.TabIndex = 33;
             this.SingUp.Text = "Submit";
             this.SingUp.UseVisualStyleBackColor = true;
             this.SingUp.Click += new System.EventHandler(this.SingUp_Click);
             // 
-            // textBox8
+            // address
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(628, 279);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(157, 29);
-            this.textBox8.TabIndex = 32;
+            this.address.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.address.Location = new System.Drawing.Point(628, 279);
+            this.address.Name = "address";
+            this.address.Size = new System.Drawing.Size(157, 29);
+            this.address.TabIndex = 32;
             // 
-            // textBox7
+            // matric
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(628, 219);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(157, 29);
-            this.textBox7.TabIndex = 31;
+            this.matric.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.matric.Location = new System.Drawing.Point(628, 219);
+            this.matric.Name = "matric";
+            this.matric.Size = new System.Drawing.Size(157, 29);
+            this.matric.TabIndex = 31;
             // 
-            // textBox6
+            // fsc
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(628, 154);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(157, 29);
-            this.textBox6.TabIndex = 30;
+            this.fsc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fsc.Location = new System.Drawing.Point(628, 154);
+            this.fsc.Name = "fsc";
+            this.fsc.Size = new System.Drawing.Size(157, 29);
+            this.fsc.TabIndex = 30;
             // 
-            // textBox5
+            // email
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(628, 101);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(157, 29);
-            this.textBox5.TabIndex = 29;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.email.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.email.Location = new System.Drawing.Point(628, 101);
+            this.email.Name = "email";
+            this.email.Size = new System.Drawing.Size(157, 29);
+            this.email.TabIndex = 29;
+            this.email.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
-            // textBox4
+            // contactNo
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(243, 334);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(161, 29);
-            this.textBox4.TabIndex = 28;
+            this.contactNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contactNo.Location = new System.Drawing.Point(243, 334);
+            this.contactNo.Name = "contactNo";
+            this.contactNo.Size = new System.Drawing.Size(161, 29);
+            this.contactNo.TabIndex = 28;
             // 
-            // textBox3
+            // secondName
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(243, 272);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(161, 29);
-            this.textBox3.TabIndex = 27;
+            this.secondName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.secondName.Location = new System.Drawing.Point(243, 272);
+            this.secondName.Name = "secondName";
+            this.secondName.Size = new System.Drawing.Size(161, 29);
+            this.secondName.TabIndex = 27;
             // 
-            // textBox2
+            // firstName
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(243, 209);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(161, 29);
-            this.textBox2.TabIndex = 26;
+            this.firstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstName.Location = new System.Drawing.Point(243, 209);
+            this.firstName.Name = "firstName";
+            this.firstName.Size = new System.Drawing.Size(161, 29);
+            this.firstName.TabIndex = 26;
             // 
-            // textBox1
+            // username
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(243, 99);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(161, 29);
-            this.textBox1.TabIndex = 25;
+            this.username.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.username.Location = new System.Drawing.Point(243, 99);
+            this.username.Name = "username";
+            this.username.Size = new System.Drawing.Size(161, 29);
+            this.username.TabIndex = 25;
             // 
             // label8
             // 
@@ -204,13 +206,13 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "userName";
             // 
-            // textBox9
+            // password
             // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(243, 151);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(161, 29);
-            this.textBox9.TabIndex = 35;
+            this.password.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.password.Location = new System.Drawing.Point(243, 151);
+            this.password.Name = "password";
+            this.password.Size = new System.Drawing.Size(161, 29);
+            this.password.TabIndex = 35;
             // 
             // label9
             // 
@@ -222,22 +224,35 @@
             this.label9.TabIndex = 34;
             this.label9.Text = "Password";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.button1.Location = new System.Drawing.Point(1178, 16);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 36);
+            this.button1.TabIndex = 36;
+            this.button1.Text = "Back";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 706);
-            this.Controls.Add(this.textBox9);
+            this.BackgroundImage = global::Vp_semester_Project.Properties.Resources.orig_7322;
+            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.password);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.SingUp);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.address);
+            this.Controls.Add(this.matric);
+            this.Controls.Add(this.fsc);
+            this.Controls.Add(this.email);
+            this.Controls.Add(this.contactNo);
+            this.Controls.Add(this.secondName);
+            this.Controls.Add(this.firstName);
+            this.Controls.Add(this.username);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -261,14 +276,14 @@
         #endregion
 
         private System.Windows.Forms.Button SingUp;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox address;
+        private System.Windows.Forms.TextBox matric;
+        private System.Windows.Forms.TextBox fsc;
+        private System.Windows.Forms.TextBox email;
+        private System.Windows.Forms.TextBox contactNo;
+        private System.Windows.Forms.TextBox secondName;
+        private System.Windows.Forms.TextBox firstName;
+        private System.Windows.Forms.TextBox username;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -277,7 +292,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox password;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button button1;
     }
 }
