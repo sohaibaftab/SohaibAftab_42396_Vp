@@ -15,9 +15,10 @@ namespace Vp_semester_Project
     {
         public Login()
         {
+            
             InitializeComponent();
         }
-
+        public int RollNumber;
         private void button1_Click(object sender, EventArgs e)
         {
             //this.Hide();
@@ -26,7 +27,7 @@ namespace Vp_semester_Project
             
 
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\sohaibaftab\Documents\Data.mdf;Integrated Security=True;Connect Timeout=30");
-            SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) From register where userName='" + textBox1.Text + "'and password='" + textBox2.Text + "'", con);
+            SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) From AddUser where RollNo='" + textBox1.Text + "'and password='" + textBox2.Text + "'", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             if (dt.Rows[0][0].ToString() == "1")
@@ -34,6 +35,7 @@ namespace Vp_semester_Project
                 this.Hide();
                 Test main = new Test();
                 main.Show();
+                
             }
             else
                 MessageBox.Show("invalid");

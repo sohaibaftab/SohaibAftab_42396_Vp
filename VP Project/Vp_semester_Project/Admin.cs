@@ -23,7 +23,7 @@ namespace Vp_semester_Project
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\sohaibaftab\Documents\Data.mdf;Integrated Security=True;Connect Timeout=30");
             con.Open();
             string str = "insert into Questions(questions,optionOne,optionTwo,OptionThree,optionFour,Answer) VALUES('" + Question.Text + "','" + A.Text + "','" + B.Text + "','" + C.Text + "','" + D.Text + "','" + Answer.Text+ "')";
-            SqlCommand comand = new SqlCommand(str, con);
+            SqlCommand comand = new SqlCommand(str,con);
             comand.ExecuteNonQuery();
             con.Close();
         }

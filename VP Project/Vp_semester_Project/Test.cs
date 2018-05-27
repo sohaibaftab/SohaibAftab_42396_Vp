@@ -11,6 +11,7 @@ using System.Data.SqlClient;
 using System.Timers;
 using System.Threading;
 
+
 namespace Vp_semester_Project
 {
     public partial class Test : Form
@@ -23,14 +24,16 @@ namespace Vp_semester_Project
         {
             InitializeComponent();
             readData();
-            textBox1.Text = ques[j++];
-            radioButton1.Text = ques[j++];
-            radioButton2.Text = ques[j++];
-            radioButton3.Text = ques[j++];
+            questions.Text = ques[j++];
+            optionA.Text = ques[j++];
+            optionB.Text = ques[j++];
+            optionC.Text = ques[j++];
             radioButton4.Text = ques[j++];
             Unchecked();
             label2.Text = p.ToString();
             label3.Text = QNumber.ToString();
+           
+            qNo.Text = QNumber.ToString();
             
 
 
@@ -68,84 +71,67 @@ namespace Vp_semester_Project
         {
                  saveAnswer();    
                  Unchecked();
-                textBox1.Text = ques[j++];
-                radioButton1.Text = ques[j++];
-                radioButton2.Text = ques[j++];
-                radioButton3.Text = ques[j++];
+                questions.Text = ques[j++];
+                optionA.Text = ques[j++];
+                optionB.Text = ques[j++];
+                optionC.Text = ques[j++];
                 radioButton4.Text = ques[j++];
                 t++;
                 QNumber++;
                 label3.Text = QNumber.ToString();
+                qNo.Text = QNumber.ToString();
                
             if(t==p)
             {
                  
                 
                 tabControl1.SelectedTab = tabPage3;
-                MessageBox.Show(result.ToString());
+                label4.Text=result.ToString();
                 
             }
          
 
         }
 
-       
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-           
-        }
-       
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            
-            
-        }
-
-        private void tabPage2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button4_Click(object sender, EventArgs e)
         {
             j = j-10;
             
-            textBox1.Text = ques[j++];
-            radioButton1.Text = ques[j++];
-            radioButton2.Text = ques[j++];
-            radioButton3.Text = ques[j++];
+            questions.Text = ques[j++];
+            optionA.Text = ques[j++];
+            optionB.Text = ques[j++];
+            optionC.Text = ques[j++];
             radioButton4.Text = ques[j++];
             
         }
 
         public void Unchecked()
         {
-            radioButton1.Checked = false;
-            radioButton2.Checked = false;
-            radioButton3.Checked = false;
+            optionA.Checked = false;
+            optionB.Checked = false;
+            optionC.Checked = false;
             radioButton4.Checked = false;
         }
         public void saveAnswer()
         {
-            if (radioButton1.Checked == true)
+            if (optionA.Checked == true)
             {
-                ans[k] = radioButton1.Text;
+                ans[k] = optionA.Text;
             }
-            if (radioButton2.Checked == true)
+            if (optionB.Checked == true)
             {
-                ans[k] = radioButton2.Text;
+                ans[k] = optionB.Text;
             }
-            if (radioButton3.Checked == true)
+            if (optionC.Checked == true)
             {
-                ans[k] = radioButton3.Text;
+                ans[k] = optionC.Text;
             }
             if (radioButton4.Checked == true)
             {
                 ans[k] = radioButton4.Text;
             }
-            if (radioButton1.Checked && radioButton2.Checked && radioButton3.Checked && radioButton4.Checked == false)
+            if (optionA.Checked && optionB.Checked && optionC.Checked && radioButton4.Checked == false)
             {
                 ans[k] = "null";
             }
@@ -153,7 +139,7 @@ namespace Vp_semester_Project
             if (ans[anss] == correctAns[anss])
             {
                 result = result + 10;
-                checkBox1.ThreeState = true;
+                
 
 
             }
@@ -180,6 +166,18 @@ namespace Vp_semester_Project
             timer1.Start();
             tabControl1.SelectedTab = tabPage2;
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
         
     }
 }
